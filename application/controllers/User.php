@@ -18,7 +18,7 @@ class User extends CI_Controller {
                 'required' => 'You have not provided %s.',
                 'is_unique' => 'This %s already exists.'
             ));
-            $this->form_validation->set_rules('user_password', 'Password', 'trim|required|min_length[8]');
+            $this->form_validation->set_rules('user_password', 'Password', 'trim|required');
             $this->form_validation->set_rules('user_cpassword', 'Confirm Password', 'trim|required|matches[user_password]');
             $this->form_validation->set_rules('user_email', 'Email', 'trim|required|valid_email|is_unique[user.user_email]', array(
                 'required' => 'You have not provided %s.',
